@@ -1,0 +1,11 @@
+--- id3lib-3.8.2/src/Makefile.am.orig	2002-11-24 01:23:00.000000000 +0100
++++ id3lib-3.8.2/src/Makefile.am	2003-04-19 20:03:22.000000000 +0200
+@@ -74,6 +74,8 @@
+ 
+ if ID3_NEEDZLIB
+ LDADD        = $(top_builddir)/zlib/src/libz.la
++else
++libid3_la_LIBADD = -lz
+ endif
+ 
+ libid3_la_LDFLAGS = \

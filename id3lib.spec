@@ -2,11 +2,12 @@ Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
 Patch0:		%{name}-nozlibpopt.patch
+Patch1:		%{name}-link.patch
 URL:		http://id3lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -46,13 +47,13 @@ Pakiet zawiera pliki nag³ówkowe, które bêd± potrzebne programistom
 chc±cych rozwijaæ aplikacje u¿ywaj±ce biblioteki id3lib.
 
 %package static
-Summary:	Static id3lib libraies
+Summary:	Static id3lib libraries
 Summary(pl):	Statyczne biblioteki id3lib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-Static id3lib libraies.
+Static id3lib libraries.
 
 %description static -l pl
 Statyczne biblioteki id3lib.
@@ -68,12 +69,13 @@ Few simple utilities to manipulate on ID3 tags: id3convert, id3cp,
 id3info, id3tag.
 
 %description utils -l pl
-Kilka prostych narzêdzi do obs³ugi tagów ID3: id3convert, id3cp,
+Kilka prostych narzêdzi do obs³ugi znaczników ID3: id3convert, id3cp,
 id3info, id3tag.
 
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
