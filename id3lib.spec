@@ -42,7 +42,7 @@ This package contains the headers that programmers will need to
 develop applications which will use id3lib, the software library for
 ID3v1 and ID3v2 tag manipulation.
 
-%description -l pl devel
+%description devel -l pl
 Pakiet zawiera pliki nag³ówkowe, które bêd± potrzebne programistom
 chc±cych rozwijaæ aplikacje u¿ywaj±ce biblioteki id3lib.
 
@@ -55,7 +55,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static id3lib libraies.
 
-%description -l pl static
+%description static -l pl
 Statyczne biblioteki id3lib.
 
 %prep
