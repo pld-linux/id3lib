@@ -1,14 +1,22 @@
 Summary:	A software library for manipulating ID3v1 and ID3v2 tags
+Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
-Version:	3.7.12
+Version:	3.7.13
 Release:	1
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
+Patch0:		%{name}-configure.patch
 URL:		http://id3lib.sourceforge.net/
+BuildRequires:	libtool
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	popt-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -19,8 +27,17 @@ applications. Features include identification of valid tags, automatic
 size conversions, (re)synchronisation of tag frames, seamless tag
 (de)compression, and optional padding facilities.
 
+%description -l pl
+Pakiet dostarcza bibliotekê pozwalaj±c± na manipulacje znacznikami
+ID3v1 oraz ID3v2. Dostarcza on przekonywuj±cy interfejs dla
+programistów pozwalaj±c na dodawanie mo¿liwo¶ci obs³ugi znaczników
+ID3v1/2 w ich w³asnych aplikacjach. Mo¿liwo¶ci biblioteki to
+identyfikacja prawid³owych znaczników, automatyczna konwersja
+rozmiaru, synchronizacja ramek, dekompresja itp.
+
 %package devel
 Summary:	Headers for developing programs that will use id3lib
+Summary(pl):	Pliki nag³ówkowe dla programistów u¿ywaj±cych id3lib
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -32,8 +49,13 @@ This package contains the headers that programmers will need to
 develop applications which will use id3lib, the software library for
 ID3v1 and ID3v2 tag manipulation.
 
+%description -l pl devel
+Pakiet zawiera pliki nag³ówkowe, które bêd± potrzebne programistom
+chc±cych rozwijaæ aplikacje u¿ywaj±ce biblioteki id3lib.
+
 %package static
 Summary:	Static id3lib libraies
+Summary(pl):	Statyczne biblioteki id3lib
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -43,10 +65,19 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static id3lib libraies.
 
+%description -l pl static
+Statyczne biblioteki id3lib.
+
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+rm missing
+libtoolize --copy --force
+aclocal -I m4
+autoconf
+automake -a -c
 %configure
 
 %{__make}
@@ -66,11 +97,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc {A*,H*,N*,R*,T*}.gz
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog.gz
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/*
