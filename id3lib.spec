@@ -5,13 +5,6 @@ Version:	3.7.13
 Release:	2
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
 Patch0:		%{name}-configure.patch
 URL:		http://id3lib.sourceforge.net/
@@ -42,13 +35,6 @@ rozmiaru, synchronizacja ramek, dekompresja itp.
 Summary:	Headers for developing programs that will use id3lib
 Summary(pl):	Pliki nagЁСwkowe dla programistСw u©ywaj╠cych id3lib
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -64,13 +50,6 @@ chc╠cych rozwijaФ aplikacje u©ywaj╠ce biblioteki id3lib.
 Summary:	Static id3lib libraies
 Summary(pl):	Statyczne biblioteki id3lib
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
