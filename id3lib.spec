@@ -1,9 +1,10 @@
 Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Name:		id3lib
-Version:	3.7.10
+Version:	3.7.12
 Release:	1
 License:	LGPL
 Group:		Libraries
+Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
@@ -21,6 +22,7 @@ size conversions, (re)synchronisation of tag frames, seamless tag
 %package devel
 Summary:	Headers for developing programs that will use id3lib
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -33,6 +35,7 @@ ID3v1 and ID3v2 tag manipulation.
 %package static
 Summary:	Static id3lib libraies
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -44,7 +47,6 @@ Static id3lib libraies.
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 
 %{__make}
@@ -53,8 +55,6 @@ LDFLAGS="-s"; export LDFLAGS
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf AUTHORS ChangeLog HISTORY NEWS README THANKS TODO
 
