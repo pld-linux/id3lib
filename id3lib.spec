@@ -85,7 +85,7 @@ id3info, id3tag.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal -I m4
 %{__autoconf}
 %{__automake}
