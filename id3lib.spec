@@ -9,6 +9,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
 Patch0:		%{name}-configure.patch
 URL:		http://id3lib.sourceforge.net/
