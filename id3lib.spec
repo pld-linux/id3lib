@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-nozlibpopt.patch
+Patch2:		%{name}-gcc3.patch
 URL:		http://id3lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -82,6 +83,7 @@ id3info, id3tag.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
@@ -98,8 +100,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf AUTHORS ChangeLog HISTORY NEWS README THANKS TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -108,12 +108,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {A*,H*,N*,R*,T*}.gz
+%doc AUTHORS HISTORY NEWS README THANKS TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc ChangeLog.gz
+%doc ChangeLog
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/*
