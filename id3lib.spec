@@ -1,4 +1,4 @@
-# $Id: id3lib.spec,v 1.1 2000-06-03 02:04:35 bonkey Exp $
+# $Id: id3lib.spec,v 1.2 2000-06-09 07:22:59 kloczek Exp $
 
 Name:		id3lib
 Version:	3.7.9
@@ -92,11 +92,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %ifnarch noarch
 
-make DESTDIR=$RPM_BUILD_ROOT install
+%{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 %else
 
-make docs
+%{__make} docs
  
 # strip down the doc and examples directories so we can copy w/impunity
 for i in doc/ examples/; do \
