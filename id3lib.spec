@@ -1,14 +1,13 @@
 Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
-Version:	3.7.13
-Release:	5
+Version:	3.8.2
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
-Patch0:		%{name}-configure.patch
-Patch1:		%{name}-nozlibpopt.patch
-Patch2:		%{name}-gcc3.patch
+Patch0:		%{name}-nozlibpopt.patch
+#Patch1:		%{name}-gcc3.patch
 URL:		http://id3lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -16,11 +15,6 @@ BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_gcc_ver	%(%{__cc} -dumpversion | cut -b 1)
-%if %{_gcc_ver} == 2
-%define		__cxx		"%{__cc}"
-%endif
 
 %description
 This package provides a software library for manipulating ID3v1 and
@@ -82,8 +76,7 @@ id3info, id3tag.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
+#%patch1 -p1
 
 %build
 rm -f missing
