@@ -2,7 +2,7 @@ Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.3
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
@@ -13,7 +13,8 @@ Patch2:		%{name}-iconv-in-libc.patch
 URL:		http://id3lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,6 +39,8 @@ Summary:	Headers for developing programs that will use id3lib
 Summary(pl):	Pliki nag³ówkowe dla programistów u¿ywaj±cych id3lib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libstdc++-devel
+Requires:	zlib-devel
 
 %description devel
 This package contains the headers that programmers will need to
