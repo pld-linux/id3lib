@@ -6,8 +6,7 @@ Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
-# Source0-md5: 
-#Source0-md5:	b5da9d2f714203eb6f78f63d1725ff39
+# Source0-md5:	b5da9d2f714203eb6f78f63d1725ff39
 Patch0:		%{name}-nozlibpopt.patch
 Patch1:		%{name}-link.patch
 URL:		http://id3lib.sourceforge.net/
