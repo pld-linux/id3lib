@@ -7,12 +7,10 @@ License:	LGPL
 Group:		Libraries
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
 Patch0:		%{name}-nozlibpopt.patch
-#Patch1:		%{name}-gcc3.patch
 URL:		http://id3lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	popt-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -76,7 +74,6 @@ id3info, id3tag.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1
 
 %build
 rm -f missing
