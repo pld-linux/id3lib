@@ -5,8 +5,8 @@ Version:	3.8.3
 Release:	1
 License:	LGPL
 Group:		Libraries
-# Source0-md5:	19f27ddd2dda4b2d26a559a4f0f402a7
 Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
+# Source0-md5:	19f27ddd2dda4b2d26a559a4f0f402a7
 Patch0:		%{name}-nozlibpopt.patch
 Patch1:		%{name}-link.patch
 URL:		http://id3lib.sourceforge.net/
@@ -85,13 +85,13 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure
-
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
