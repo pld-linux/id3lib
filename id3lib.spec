@@ -2,7 +2,7 @@ Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.7.13
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/id3lib/%{name}-%{version}.tar.gz
@@ -76,7 +76,7 @@ libtoolize --copy --force
 aclocal -I m4
 autoconf
 automake -a -c
-%configure
+%configure CC=g++
 
 %{__make}
 
