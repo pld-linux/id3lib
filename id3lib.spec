@@ -1,6 +1,6 @@
 Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Name:		id3lib
-Version:	3.7.9
+Version:	3.7.10
 Release:	1
 License:	LGPL
 Group:		Libraries
