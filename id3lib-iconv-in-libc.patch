@@ -1,0 +1,19 @@
+--- id3lib-3.8.3/configure.in.orig	Thu May  6 16:33:45 2004
++++ id3lib-3.8.3/configure.in	Thu May  6 16:38:37 2004
+@@ -149,12 +149,12 @@
+   if test ! x$silent = xyes; then
+     exec 6>&1
+   fi
+-  #standalone library rules over libc
+-  if test $iconv_in_iconv = 1 -o $libiconv_in_iconv = 1; then
++  #standalone library rules over libc? NO WAY.
++  if test $iconv_in_libc = 1; then
++    AC_MSG_RESULT(libc)
++  elif test $iconv_in_iconv = 1 -o $libiconv_in_iconv = 1; then
+     AC_MSG_RESULT(libiconv)
+     ICONV_LIB=-liconv
+-  elif test $iconv_in_libc = 1; then
+-    AC_MSG_RESULT(libc)
+   else
+     AC_MSG_RESULT(not found (panic))
+     AC_MSG_ERROR([iconv.h found, while iconv library not found])
