@@ -16,6 +16,8 @@ BuildRequires:	popt-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		__cc		%{__cxx}
+
 %description
 This package provides a software library for manipulating ID3v1 and
 ID3v2 tags. It provides a convenient interface for software developers
@@ -84,7 +86,7 @@ libtoolize --copy --force
 aclocal -I m4
 autoconf
 automake -a -c -f
-%configure CC=g++
+%configure
 
 %{__make}
 
