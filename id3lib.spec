@@ -36,7 +36,7 @@ rozmiaru, synchronizacja ramek, dekompresja itp.
 Summary:	Headers for developing programs that will use id3lib
 Summary(pl):	Pliki nag³ówkowe dla programistów u¿ywaj±cych id3lib
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This package contains the headers that programmers will need to
@@ -51,7 +51,7 @@ chc±cych rozwijaæ aplikacje u¿ywaj±ce biblioteki id3lib.
 Summary:	Static id3lib libraries
 Summary(pl):	Statyczne biblioteki id3lib
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static id3lib libraries.
@@ -63,7 +63,7 @@ Statyczne biblioteki id3lib.
 Summary:	Simple id3 utils
 Summary(pl):	Proste narzêdzia do id3
 Group:		Applications/File
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description utils
 Few simple utilities to manipulate on ID3 tags: id3convert, id3cp,
