@@ -16,7 +16,10 @@ BuildRequires:	popt-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		__cc		%{__cxx}
+%define		_gcc_ver	%(%{__cc} -dumpversion | cut -b 1)
+%if %{_gcc_ver} == 2
+%define		__cxx		"%{__cc}"
+%endif
 
 %description
 This package provides a software library for manipulating ID3v1 and
