@@ -28,11 +28,11 @@ size conversions, (re)synchronisation of tag frames, seamless tag
 
 %description -l pl
 Pakiet dostarcza bibliotekê pozwalaj±c± na manipulacje znacznikami
-ID3v1 oraz ID3v2. Dostarcza on przekonywuj±cy interfejs dla
-programistów pozwalaj±c na dodawanie mo¿liwo¶ci obs³ugi znaczników
-ID3v1/2 w ich w³asnych aplikacjach. Mo¿liwo¶ci biblioteki to
-identyfikacja prawid³owych znaczników, automatyczna konwersja
-rozmiaru, synchronizacja ramek, dekompresja itp.
+ID3v1 oraz ID3v2. Dostarcza on wygodny interfejs dla programistów
+pozwalaj±c na dodawanie mo¿liwo¶ci obs³ugi znaczników ID3v1/2 w ich
+w³asnych aplikacjach. Mo¿liwo¶ci biblioteki to identyfikacja
+prawid³owych znaczników, automatyczna konwersja rozmiaru,
+synchronizacja ramek, dekompresja itp.
 
 %package devel
 Summary:	Headers for developing programs that will use id3lib
