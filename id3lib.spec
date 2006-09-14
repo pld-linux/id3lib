@@ -2,7 +2,7 @@ Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.3
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
 Patch0:		%{name}-nozlibpopt.patch
 Patch1:		%{name}-link.patch
 Patch2:		%{name}-iconv-in-libc.patch
+Patch3:		http://dl.sourceforge.net/easytag/patch_id3lib_3.8.3_UTF16_writing_bug.diff
 URL:		http://id3lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -82,6 +83,7 @@ id3info, id3tag.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %{__libtoolize}
