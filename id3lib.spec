@@ -1,5 +1,5 @@
 Summary:	A software library for manipulating ID3v1 and ID3v2 tags
-Summary(pl):	Biblioteka do zarz±dzania znacznikami ID3v1 oraz ID3v2
+Summary(pl.UTF-8):   Biblioteka do zarzÄ…dzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.3
 Release:	5
@@ -27,17 +27,17 @@ applications. Features include identification of valid tags, automatic
 size conversions, (re)synchronisation of tag frames, seamless tag
 (de)compression, and optional padding facilities.
 
-%description -l pl
-Pakiet dostarcza bibliotekê pozwalaj±c± na manipulacje znacznikami
-ID3v1 oraz ID3v2. Dostarcza on wygodny interfejs dla programistów
-pozwalaj±c na dodawanie mo¿liwo¶ci obs³ugi znaczników ID3v1/2 w ich
-w³asnych aplikacjach. Mo¿liwo¶ci biblioteki to identyfikacja
-prawid³owych znaczników, automatyczna konwersja rozmiaru,
+%description -l pl.UTF-8
+Pakiet dostarcza bibliotekÄ™ pozwalajÄ…cÄ… na manipulacje znacznikami
+ID3v1 oraz ID3v2. Dostarcza on wygodny interfejs dla programistÃ³w
+pozwalajÄ…c na dodawanie moÅ¼liwoÅ›ci obsÅ‚ugi znacznikÃ³w ID3v1/2 w ich
+wÅ‚asnych aplikacjach. MoÅ¼liwoÅ›ci biblioteki to identyfikacja
+prawidÅ‚owych znacznikÃ³w, automatyczna konwersja rozmiaru,
 synchronizacja ramek, dekompresja itp.
 
 %package devel
 Summary:	Headers for developing programs that will use id3lib
-Summary(pl):	Pliki nag³ówkowe dla programistów u¿ywaj±cych id3lib
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe dla programistÃ³w uÅ¼ywajÄ…cych id3lib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -48,25 +48,25 @@ This package contains the headers that programmers will need to
 develop applications which will use id3lib, the software library for
 ID3v1 and ID3v2 tag manipulation.
 
-%description devel -l pl
-Pakiet zawiera pliki nag³ówkowe, które bêd± potrzebne programistom
-chc±cych rozwijaæ aplikacje u¿ywaj±ce biblioteki id3lib.
+%description devel -l pl.UTF-8
+Pakiet zawiera pliki nagÅ‚Ã³wkowe, ktÃ³re bÄ™dÄ… potrzebne programistom
+chcÄ…cych rozwijaÄ‡ aplikacje uÅ¼ywajÄ…ce biblioteki id3lib.
 
 %package static
 Summary:	Static id3lib libraries
-Summary(pl):	Statyczne biblioteki id3lib
+Summary(pl.UTF-8):   Statyczne biblioteki id3lib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static id3lib libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki id3lib.
 
 %package utils
 Summary:	Simple id3 utils
-Summary(pl):	Proste narzêdzia do id3
+Summary(pl.UTF-8):   Proste narzÄ™dzia do id3
 Group:		Applications/File
 Requires:	%{name} = %{version}-%{release}
 
@@ -74,8 +74,8 @@ Requires:	%{name} = %{version}-%{release}
 Few simple utilities to manipulate on ID3 tags: id3convert, id3cp,
 id3info, id3tag.
 
-%description utils -l pl
-Kilka prostych narzêdzi do obs³ugi znaczników ID3: id3convert, id3cp,
+%description utils -l pl.UTF-8
+Kilka prostych narzÄ™dzi do obsÅ‚ugi znacznikÃ³w ID3: id3convert, id3cp,
 id3info, id3tag.
 
 %prep
