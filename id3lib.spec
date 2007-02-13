@@ -1,5 +1,5 @@
 Summary:	A software library for manipulating ID3v1 and ID3v2 tags
-Summary(pl.UTF-8):   Biblioteka do zarządzania znacznikami ID3v1 oraz ID3v2
+Summary(pl.UTF-8):	Biblioteka do zarządzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.3
 Release:	5
@@ -37,7 +37,7 @@ synchronizacja ramek, dekompresja itp.
 
 %package devel
 Summary:	Headers for developing programs that will use id3lib
-Summary(pl.UTF-8):   Pliki nagłówkowe dla programistów używających id3lib
+Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających id3lib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -54,7 +54,7 @@ chcących rozwijać aplikacje używające biblioteki id3lib.
 
 %package static
 Summary:	Static id3lib libraries
-Summary(pl.UTF-8):   Statyczne biblioteki id3lib
+Summary(pl.UTF-8):	Statyczne biblioteki id3lib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -66,7 +66,7 @@ Statyczne biblioteki id3lib.
 
 %package utils
 Summary:	Simple id3 utils
-Summary(pl.UTF-8):   Proste narzędzia do id3
+Summary(pl.UTF-8):	Proste narzędzia do id3
 Group:		Applications/File
 Requires:	%{name} = %{version}-%{release}
 
