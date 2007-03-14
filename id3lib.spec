@@ -2,7 +2,7 @@ Summary:	A software library for manipulating ID3v1 and ID3v2 tags
 Summary(pl.UTF-8):	Biblioteka do zarządzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.3
-Release:	5
+Release:	6
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS HISTORY NEWS README THANKS TODO
+%doc AUTHORS HISTORY NEWS README THANKS TODO doc/
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
