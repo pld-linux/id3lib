@@ -3,19 +3,19 @@ Summary(pl.UTF-8):	Biblioteka do zarządzania znacznikami ID3v1 oraz ID3v2
 Name:		id3lib
 Version:	3.8.3
 Release:	10
-License:	LGPL
+License:	LGPL v2+
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/id3lib/%{name}-%{version}.tar.gz
 # Source0-md5:	19f27ddd2dda4b2d26a559a4f0f402a7
 Patch0:		%{name}-nozlibpopt.patch
 Patch1:		%{name}-link.patch
 Patch2:		%{name}-iconv-in-libc.patch
-Patch3:		http://dl.sourceforge.net/easytag/patch_id3lib_3.8.3_UTF16_writing_bug.diff
+Patch3:		http://downloads.sourceforge.net/easytag/patch_id3lib_3.8.3_UTF16_writing_bug.diff
 Patch4:		%{name}-CVE-2007-4460.patch
 Patch5:		%{name}-gcc43.patch
 URL:		http://id3lib.sourceforge.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.13
+BuildRequires:	automake >= 1.5
 BuildRequires:	doxygen
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
